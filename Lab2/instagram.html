@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        background-color: rgb(249, 249, 249);
+      }
+
+      .phone {
+        width: 360px;
+        height: 600px;
+      }
+      .screen {
+        position: absolute;
+      }
+      .logo {
+        width: 200px;
+        padding-top: 20px;
+        padding-bottom: 25px;
+        padding-left: 55px;
+      }
+      .left {
+        padding-left: 380px;
+        padding-top: 40px;
+      }
+      .face {
+        width: 20px;
+        height: 15px;
+        vertical-align: baseline;
+        padding-right: 3px;
+      }
+      .odna {
+        display: inline-flex;
+        padding-left: 75px;
+      }
+      h3 {
+        font-size: 15px;
+      }
+
+      input[type='text'],
+      input[type='password'] {
+        display: block;
+        background-color: white;
+        margin: auto;
+        padding: 10px, 40px;
+        width: 250px;
+        height: 30px;
+        border: 1.5px solid black;
+        color: black;
+        border-radius: 2px;
+        text-align: center;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 12px;
+      }
+
+      button {
+        display: block;
+        background-color: rgb(84, 146, 238);
+        border: none;
+        color: white;
+        margin: auto;
+        width: 250px;
+        height: 30px;
+        display: block;
+        border-radius: 5px;
+        padding: 10px 0;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 13px;
+      }
+      form.fff {
+        background-color: white;
+        position: absolute;
+        width: 320px;
+        height: 390px;
+        padding: auto;
+        margin: 10px;
+        border-radius: 3px;
+      }
+      .forg {
+        padding-left: 111px;
+        font-size: 14px;
+      }
+      form {
+        border: 0.1px black solid;
+        background-color: rgb(122, 49, 49);
+      }
+      form.fff {
+        padding-top: 15px;
+        margin-left: 780px;
+        margin-top: -585px;
+        background-color: rgb(252, 250, 250);
+      }
+      form.ggg {
+        background-color: white;
+        position: absolute;
+        width: 320px;
+        height: 40px;
+        padding: auto;
+        margin: 10px;
+        border-radius: 3px;
+        background-color: rgb(252, 250, 250);
+      }
+      form.ggg {
+        margin-left: 780px;
+        margin-top: -190px;
+        padding-top: 19px;
+      }
+      form.ggg h3 {
+        font-weight: 500;
+        padding-left: 15px;
+      }
+      .down {
+        padding-top: 25px;
+        margin-top: 70px;
+        background-color: rgb(249, 249, 249);
+        font-size: 13px;
+        text-align: center;
+        color: gray;
+        font-family: Italic monospace;
+      }
+      .pp {
+        padding-left: 850px;
+        margin-top: -115px;
+      }
+      .app,
+      .play {
+        width: 125px;
+      }
+      .photos {
+        padding-top: 15px;
+        padding-left: 810px;
+      }
+      .sel {
+        border: none;
+      }
+
+      .line {
+        font-size: 12px;
+        text-align: center;
+        position: relative;
+      }
+      .line span {
+        background-color: #ffffff;
+        position: relative;
+        z-index: 1;
+        padding: 5px 5px;
+      }
+      .line:after {
+        content: '';
+        display: block;
+        width: 75%;
+        height: 0.5px;
+        background-color: #262626;
+        position: absolute;
+        top: 50%;
+        margin-top: -1px;
+        margin-left: 39px;
+        z-index: 0;
+      }
+      .spravochnik a {
+        text-decoration: none;
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <img src="/Lab2/instphone.png" class="phone" />
+      </div>
+
+      <form action="" class="fff">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1024px-Instagram_logo.svg.png"
+          class="logo"
+        />
+        <input type="text" placeholder="Телефон, имя пользователя или эл. адрес" /><br />
+        <input type="password" placeholder="Пароль" /><br />
+        <button type="submit">Войти</button> <br />
+        <p class="line"><span>ИЛИ</span></p>
+        <br />
+        <div class="odna">
+          <img
+            class="face"
+            src="https://cdn.oboi7.com/e00a7684fdf6e20e83529f0ee4199347e8ad0ed8/facebook-logotipy-prostoj-fon.png"
+          />
+          <h3><a href=""> Войти через Facebook</a></h3>
+        </div>
+        <br /><br />
+
+        <a href="" class="forg">Забыли пароль?</a><br />
+      </form>
+      <br />
+      <form action="" class="ggg">
+        <h3>
+          У вас ещё нет аккаунта? <a href=""><strong>Зарегистрироваться</strong></a>
+        </h3>
+      </form>
+      <p class="pp">Установите приложение.</p>
+
+      <div class="photos">
+        <a href=""
+          ><img
+            class="app"
+            src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_russian-ru.png/bfba6d0fd6bd.png"
+        /></a>
+        <a href=""
+          ><img
+            class="play"
+            src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_russian-ru.png/4c70948c09f3.png"
+        /></a>
+      </div>
+    </div>
+
+    <div class="down">
+      <div class="spravochnik">
+        <a href=""> Meta </a>
+        <a href=""> Информация </a>
+        <a href=""> Блог </a>
+        <a href=""> Вакансии </a>
+        <a href=""> Помошь </a>
+        <a href=""> API </a>
+        <a href=""> Конфиденциальность </a>
+        <a href=""> Условия </a>
+        <a href=""> Популярные аккаунты </a>
+        <a href=""> Хэштеги </a>
+        <a href=""> Места </a>
+        <a href=""> Instagram Lite </a><br />
+        <a href=""> Красота </a>
+        <a href=""> Танцы </a>
+        <a href=""> Фитнес </a>
+        <a href=""> Еда и напитки </a>
+        <a href=""> Дом и сад </a>
+        <a href=""> Музыка </a>
+        <a href=""> Изобразительное искусство </a>
+
+        <br /><br />
+        <select class="sel">
+          <option>Русский</option>
+          <option>Узбекcкий</option>
+          <option>Казахский</option>
+          <option>Українська</option>
+          <option>English(US)</option>
+          <option>English(UK)</option>
+        </select>
+        <a>© 2022 Instagram from Meta</a><br />
+        <br />
+      </div>
+    </div>
+  </body>
+</html>
