@@ -1,0 +1,7 @@
+<h2 style="margin-top: 10px; position: absolute; font-size: 20px">Categories: </h2>
+<app-category> </app-category>
+<h2>Products</h2>
+
+<div *ngFor="let product of products">
+    <app-product-item [product]="product" ></app-product-item>
+</div>
