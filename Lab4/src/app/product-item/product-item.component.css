@@ -1,0 +1,38 @@
+.container{
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid;
+  display: block;
+}
+.strelka{
+  width: 40px;
+  height: 20px;
+  margin-top: 180px;
+  margin-left: -80px;
+  background: black;
+}
+
+.link-name{
+  display: flex;
+  position: absolute;
+  padding-left: 350px;
+  margin-top: -210px;
+  margin-right: 180px;
+}
+.desc{
+  padding-left: 350px;
+  margin-right: 50px;
+}
+
+.imga{
+  margin-left: 80px;
+
+}
+.rating{
+  margin-left: 135px;
+}
+
+.share{
+  margin-left: 80px;
+  background: black;
+}

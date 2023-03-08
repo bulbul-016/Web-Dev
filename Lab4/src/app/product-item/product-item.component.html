@@ -1,0 +1,12 @@
+<div class="container" *ngFor="let item of itemList; let i = index; ">
+  <img class="imga" src="{{item ['imgSrc'] [item ['imgCnt']]}}" width="150px" height="150px">
+  <button class="strelka" type="button" name="button" (click) = "goForward(i)">></button>
+  <button class="strelka" type="button" name="button" (click) = "goBack(i)"><</button>
+
+
+  <a class="link-name" href="{{item['Link']}}"><h1>{{item['Name']}}</h1></a>
+  <p class="desc">{{item['Description']}}</p>
+  <p class="rating" >{{item['Rating']}} ☆ </p>
+  <button class="share" type="button" name="button" onclick="window.location.href='tg://'">Share via Telegram</button>
+
+</div>
