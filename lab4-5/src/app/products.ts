@@ -14,7 +14,7 @@ export interface Product {
     //     {id: 4, title: 'televisions'}
 }
 
-export const products = [
+export const products: Product[] = [
     {
         id: 1,
         price: 634000,
