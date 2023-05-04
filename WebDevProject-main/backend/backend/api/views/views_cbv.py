@@ -3,9 +3,9 @@ from django.views import View
 from django.shortcuts import Http404
 from rest_framework.response import Response
 from rest_framework import status
-from api.models import Author, Category, Book, Comment
-from api.serializers import AuthorSerializer, CategorySerializer, BookSerializer, CommentSerializer
+from ..serializers import AuthorSerializer, CategorySerializer, BookSerializer, CommentSerializer
 from rest_framework.permissions import IsAuthenticated
+from ..models import Author, Category, Book, Comment
 
 
 class AuthorListAPIView(APIView):
@@ -13,12 +13,14 @@ class AuthorListAPIView(APIView):
         authors = Author.objects.all()
         serializer = AuthorSerializer(authors, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
     def post(self, request):
         serializer = AuthorSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 
 class AuthorDetailAPIView(APIView):
     def get_object(self, author_id):
@@ -65,6 +67,7 @@ class CategoryListAPIView(APIView):
             return Response(serializer.data)
         return Response(serializer.errors)
 
+
 class CategoryDetailAPIView(APIView):
     def get_object(self, genre_id):
         try:
@@ -90,6 +93,7 @@ class CategoryDetailAPIView(APIView):
         category.delete()
         return Response({'message': 'deleted'}, status=204)
 
+
 class BookListAPIView(APIView):
     def get(self, request):
         books = Book.objects.all()
@@ -102,6 +106,7 @@ class BookListAPIView(APIView):
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors)
+
 
 class BookDetailAPIView(APIView):
     def get_object(self, book_id):

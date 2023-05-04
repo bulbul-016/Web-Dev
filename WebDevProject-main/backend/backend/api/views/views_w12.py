@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 import json
-from api.models import Author, Book, Category
+from ..models import Author, Book, Category
 from django.views.decorators.csrf import csrf_exempt
-from api.serializers import AuthorSerializer
+from ..serializers import AuthorSerializer
+
 
 # Create your views here.
 
@@ -42,7 +43,6 @@ def author_detail(request, author_id):
     elif request.method == "DELETE":
         author.delete()
         return JsonResponse({'message': 'deleted'}, status=204)
-
 
 
 def author_books(request, author_id):
@@ -103,6 +103,7 @@ def author_books(request, author_id):
         books_json = [b.to_json() for b in books]
 
         return JsonResponse(books_json, safe=False)
+
 
 @csrf_exempt
 def genre_books(request, category_id):

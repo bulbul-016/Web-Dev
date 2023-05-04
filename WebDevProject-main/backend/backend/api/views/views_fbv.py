@@ -8,8 +8,8 @@ from rest_framework import status
 from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from api.models import Author, Book, Comment
-from api.serializers import AuthorSerializer, UserSerializer, CommentSerializer
+from ..models import Author, Book, Comment
+from ..serializers import AuthorSerializer, UserSerializer, CommentSerializer
 
 
 @api_view(['GET', 'POST'])
